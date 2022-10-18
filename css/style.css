@@ -234,14 +234,18 @@ body {
   text-align: center;
 }
 
+@media (max-width: 900px) {
+  span {
+    display: none;
+  }
+}
+
 @media (max-width: 700px) {
   body {
     grid-template-columns: 1fr;
   }
 
-  span {
-    display: none;
-  }
+
 
   .menu,
   .copy {
