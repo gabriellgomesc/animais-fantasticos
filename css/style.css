@@ -174,12 +174,12 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
   margin-top: 2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   color: #E54;
 }
 
 .faq-lista dt:first-child {
-  margin: 0;
+  margin-top: 0;
 }
 
 .faq-lista dt::before {
@@ -344,6 +344,40 @@ body {
   }
 }
 
+dt {
+  cursor: pointer;
+}
+
 .animais-lista li {
   cursor: pointer;
+}
+
+.js-accordion dd {
+  display: none;
+  animation: slideUp 0.5s forwards;
+}
+
+.js-accordion dt::after {
+  content: "⬎";
+  margin-left: 10px;
+}
+
+.js-accordion dt.ativo::after {
+  content: "⬏";
+}
+
+.js-accordion dd.ativo {
+  display: block;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+
+  to {
+    opacity: 1;
+    max-height: 2000px;
+  }
 }
