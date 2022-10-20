@@ -331,7 +331,7 @@ body {
   display: none;
 }
 
-.js-tabcontent section.ativo {
+.js .js-tabcontent section.ativo {
   display: block;
   animation: show 0.5s forwards;
 }
@@ -356,21 +356,21 @@ dt {
   cursor: pointer;
 }
 
-.js-accordion dd {
+.js .js-accordion dd {
   display: none;
   animation: slideUp 0.5s forwards;
 }
 
-.js-accordion dt::after {
+.js .js-accordion dt::after {
   content: "⬎";
   margin-left: 10px;
 }
 
-.js-accordion dt.ativo::after {
+.js .js-accordion dt.ativo::after {
   content: "⬏";
 }
 
-.js-accordion dd.ativo {
+.js .js-accordion dd.ativo {
   display: block;
 }
 
@@ -384,4 +384,15 @@ dt {
     opacity: 1;
     max-height: 2000px;
   }
+}
+
+.js .js-scroll {
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  transform: translate3d(-30px, 0, 0);
+}
+
+.js .js-scroll.ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }

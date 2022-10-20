@@ -14,41 +14,48 @@
 // })
 
 /* aumentar o texto */
-const texto = document.querySelector(`.texto`)
+function initTextoMaior() {
+  const texto = document.querySelector(`.texto`)
 
-function aumentaTexto() {
-  document.documentElement.classList.toggle(`textomaior`)
+  function aumentaTexto() {
+    document.documentElement.classList.toggle(`textomaior`)
+  }
+
+  texto.addEventListener(`click`, aumentaTexto)
 }
+initTextoMaior()
 
-texto.addEventListener(`click`, aumentaTexto)
 
 /* alterar tema da página (claro/escuro) */
-const claro = document.querySelector(`body`).classList
-const tema = document.querySelector(`.tema`)
+function initTemas() {
+  const claro = document.querySelector(`body`).classList
+  const tema = document.querySelector(`.tema`)
 
-function alteraTema() {
-  if (claro[0] === `claro`) {
-    document.body.classList.remove(`claro`)
-    document.body.classList.add(`escuro`)
-  } else {
-    document.body.classList.remove(`escuro`)
-    document.body.classList.add(`claro`)
+  function alteraTema() {
+    if (claro[0] === `claro`) {
+      document.body.classList.remove(`claro`)
+      document.body.classList.add(`escuro`)
+    } else {
+      document.body.classList.remove(`escuro`)
+      document.body.classList.add(`claro`)
+    }
   }
+  tema.addEventListener(`click`, alteraTema)
 }
-
-tema.addEventListener(`click`, alteraTema)
+initTemas()
 
 // navegação por tabs
 const tabMenu = document.querySelectorAll(`.js-tabmenu li`)
+const activeClass = `ativo`
 const tabContent = document.querySelectorAll(`.js-tabcontent section`)
 
 if (tabMenu.length && tabMenu.length) {
-  tabContent[0].classList.add(`ativo`)
+  tabContent[0].classList.add(activeClass)
   function activeTab(index) {
     tabContent.forEach((section) => {
-      section.classList.remove(`ativo`)
+      section.classList.remove(activeClass)
     })
-    tabContent[index].classList.add(`ativo`)
+    tabContent[index].classList.add(activeClass)
   }
 
   tabMenu.forEach((itemMenu, index) => {
@@ -65,7 +72,7 @@ function initAccordion() {
   if (accordionList.length) {
     accordionList[0].classList.add(activeClass)
     accordionList[0].nextElementSibling.classList.add(activeClass)
-    
+
     function accordion() {
       this.classList.toggle(activeClass)
       this.nextElementSibling.classList.toggle(activeClass)
@@ -76,5 +83,28 @@ function initAccordion() {
     })
   }
 }
-
 initAccordion()
+
+// anima ao scroll
+function initScroll() {
+  const sections = document.querySelectorAll(`.js-scroll`)
+  if (sections.length) {
+    const window60 = window.innerHeight * 0.6
+    const activeClass = `ativo`
+
+    function animaScroll() {
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top
+        const isSectionVisible = (sectionTop - window60) <= 0
+        if (isSectionVisible) {
+          section.classList.add(activeClass)
+        } else {
+          section.classList.remove(activeClass)
+        }
+      })
+      window.addEventListener(`scroll`, animaScroll)
+    }
+    animaScroll()
+  }
+}
+initScroll()
