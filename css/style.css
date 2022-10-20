@@ -144,6 +144,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.animais p:last-child {
+  margin: 0;
+}
+
 .animais-lista {
   height: 370px;
   overflow-y: scroll;
