@@ -13,7 +13,6 @@ dl {
 
 html {
   scroll-behavior: smooth;
-  transition: 0.5s ease-in-out;
 }
 
 html.textomaior {
@@ -60,7 +59,6 @@ ul {
 }
 
 body {
-  transition: 0.5s ease-in-out;
   -webkit-font-smoothing: antialiased;
   display: grid;
   grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
@@ -180,6 +178,10 @@ body {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
   color: #E54;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+   user-select: none;
 }
 
 .faq-lista dt:first-child {
