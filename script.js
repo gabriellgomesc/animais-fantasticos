@@ -15,96 +15,104 @@
 
 /* aumentar o texto */
 function initTextoMaior() {
-  const texto = document.querySelector('.texto')
+  const texto = document.querySelector(".texto");
 
   function aumentaTexto() {
-    document.documentElement.classList.toggle('textomaior')
+    document.documentElement.classList.toggle("textomaior");
+    texto.classList.toggle("inverter");
   }
 
-  texto.addEventListener('click', aumentaTexto)
+  texto.addEventListener("click", aumentaTexto);
 }
-initTextoMaior()
+initTextoMaior();
 
-
-/* alterar tema da página (claro/escuro) */
+// alterar tema da página (claro/escuro)
 function initTemas() {
-  const claro = document.querySelector('body').classList
-  const tema = document.querySelector('.tema')
+  const claro = document.querySelector("body").classList;
+  const temas = document.querySelectorAll(".tema");
 
   function alteraTema() {
-    if (claro[0] === 'claro') {
-      document.body.classList.remove('claro')
-      document.body.classList.add('escuro')
+    if (claro[0] === "claro") {
+      document.body.classList.remove("claro");
+      document.body.classList.add("escuro");
+      temas.forEach((tema) => {
+        tema.classList.add("ativo");
+      });
     } else {
-      document.body.classList.remove('escuro')
-      document.body.classList.add('claro')
+      document.body.classList.remove("escuro");
+      document.body.classList.add("claro");
+      temas.forEach((tema) => {
+        tema.classList.remove("ativo");
+      });
     }
   }
-  tema.addEventListener('click', alteraTema)
+  temas.forEach((tema) => {
+    tema.addEventListener("click", alteraTema);
+  });
 }
-initTemas()
+initTemas();
 
 // navegação por tabs
-const tabMenu = document.querySelectorAll('.js-tabmenu li')
-const activeClass = 'ativo'
-const tabContent = document.querySelectorAll('.js-tabcontent section')
+const tabMenu = document.querySelectorAll(".js-tabmenu li");
+const activeClass = "ativo";
+const tabContent = document.querySelectorAll(".js-tabcontent section");
 
 if (tabMenu.length && tabMenu.length) {
-  tabContent[0].classList.add(activeClass)
+  tabContent[0].classList.add(activeClass);
   function activeTab(index) {
     tabContent.forEach((section) => {
-      section.classList.remove(activeClass)
-    })
-    tabContent[index].classList.add(activeClass)
+      section.classList.remove(activeClass);
+    });
+    tabContent[index].classList.add(activeClass);
   }
 
   tabMenu.forEach((itemMenu, index) => {
-    itemMenu.addEventListener('click', () => {
-      activeTab(index)
-    })
-  })
+    itemMenu.addEventListener("click", () => {
+      activeTab(index);
+    });
+  });
 }
 
 // accordion-list
 function initAccordion() {
-  const accordionList = document.querySelectorAll('.js-accordion dt')
-  const activeClass = 'ativo'
+  const accordionList = document.querySelectorAll(".js-accordion dt");
+  const activeClass = "ativo";
   if (accordionList.length) {
-    accordionList[0].classList.add(activeClass)
-    accordionList[0].nextElementSibling.classList.add(activeClass)
+    accordionList[0].classList.add(activeClass);
+    accordionList[0].nextElementSibling.classList.add(activeClass);
 
     function accordion() {
-      this.classList.toggle(activeClass)
-      this.nextElementSibling.classList.toggle(activeClass)
+      this.classList.toggle(activeClass);
+      this.nextElementSibling.classList.toggle(activeClass);
     }
 
     accordionList.forEach((item) => {
-      item.addEventListener('click', accordion)
-    })
+      item.addEventListener("click", accordion);
+    });
   }
 }
-initAccordion()
+initAccordion();
 
 // anima ao scroll
 function initScroll() {
-  const sections = document.querySelectorAll('.js-scroll')
+  const sections = document.querySelectorAll(".js-scroll");
   if (sections.length) {
-    const window60 = window.innerHeight * 0.6
-    const activeClass = 'ativo'
+    const window60 = window.innerHeight * 0.6;
+    const activeClass = "ativo";
 
     function animaScroll() {
       sections.forEach((section) => {
-        const sectionTop = section.getBoundingClientRect().top
-        const isSectionVisible = (sectionTop - window60) <= 0
+        const sectionTop = section.getBoundingClientRect().top;
+        const isSectionVisible = sectionTop - window60 <= 0;
         if (isSectionVisible) {
-          section.classList.add(activeClass)
+          section.classList.add(activeClass);
         } else {
-          section.classList.remove(activeClass)
+          section.classList.remove(activeClass);
         }
-      })
-      window.addEventListener('scroll', animaScroll)
+      });
+      window.addEventListener("scroll", animaScroll);
     }
-    animaScroll()
+    animaScroll();
   }
 }
-initScroll()
+initScroll();

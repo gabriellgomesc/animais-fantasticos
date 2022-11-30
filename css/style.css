@@ -19,6 +19,14 @@ html.textomaior {
   font-size: 125%;
 }
 
+.texto {
+  transition: 0.3s;
+}
+
+.texto.inverter {
+  transform: scaleX(-1);
+}
+
 span {
   display: flex;
   gap: 10px;
@@ -70,7 +78,7 @@ body {
   grid-column: 3 / 5;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  background: #FB5;
+  background: #fb5;
   border-radius: 10px 0 0 10px;
 }
 
@@ -86,11 +94,11 @@ body {
   padding: 15px 10px;
   color: #222;
   text-decoration: none;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 0.875rem;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 
 .menu img {
@@ -110,7 +118,7 @@ body {
 }
 
 .titulo {
-  font-family: 'Playfair Display SC', georgia;
+  font-family: "Playfair Display SC", georgia;
   font-size: 6rem;
   line-height: 1;
   font-weight: 400;
@@ -119,21 +127,21 @@ body {
 }
 
 .animais h2 {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   margin-bottom: 1rem;
-  color: #E54;
+  color: #e54;
 }
 
 .animais h2::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 40px;
   height: 10px;
   margin-right: 10px;
-  background: #FB5;
+  background: #fb5;
 }
 
 .animais p {
@@ -157,7 +165,7 @@ body {
 }
 
 .animais-lista::-webkit-scrollbar-thumb {
-  background: #FB5;
+  background: #fb5;
 }
 
 .animais-descricao {
@@ -169,19 +177,19 @@ body {
 }
 
 .faq-lista {
-  grid-column: 2 / 4
+  grid-column: 2 / 4;
 }
 
 .faq-lista dt {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  color: #E54;
+  color: #e54;
   -webkit-user-select: none;
   -moz-user-select: -moz-none;
   -ms-user-select: none;
-   user-select: none;
+  user-select: none;
 }
 
 .faq-lista dt:first-child {
@@ -189,17 +197,17 @@ body {
 }
 
 .faq-lista dt::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #FB5;
+  background: #fb5;
 }
 
 .faq-lista dd {
   font-family: Helvetica, Arial;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   margin-left: 30px;
 }
 
@@ -217,25 +225,25 @@ body {
 }
 
 .dados li::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #FB5;
+  background: #fb5;
 }
 
 .copy {
   grid-column: 3/5;
   margin-bottom: 2rem;
-  background: #FB5;
+  background: #fb5;
   border-radius: 10px 0 0 10px;
 }
 
 .copy p {
   color: #222;
   padding: 20px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
 }
 
@@ -335,7 +343,7 @@ body {
 
 .js .js-tabcontent section.ativo {
   display: block;
-  animation: show 0.5s forwards;
+  animation: show 0.3s forwards;
 }
 
 @keyframes show {
@@ -360,7 +368,7 @@ dt {
 
 .js .js-accordion dd {
   display: none;
-  animation: slideUp 0.5s forwards;
+  animation: slideUp 0.3s forwards;
 }
 
 .js .js-accordion dt::after {
@@ -370,6 +378,22 @@ dt {
 
 .js .js-accordion dt.ativo::after {
   content: "⬏";
+}
+
+.tema {
+  animation: showImg 0.3s forwards;
+}
+
+.tema.light {
+  display: none;
+}
+
+.tema.dark.ativo {
+  display: none;
+}
+
+.tema.light.ativo {
+  display: block;
 }
 
 .js .js-accordion dd.ativo {
@@ -390,11 +414,23 @@ dt {
 
 .js .js-scroll {
   opacity: 0;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
   transform: translate3d(-30px, 0, 0);
 }
 
 .js .js-scroll.ativo {
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+
+@keyframes showImg {
+  from {
+    opacity: 0;
+    transform: translate3d(-10px, -10px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
