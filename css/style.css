@@ -11,6 +11,11 @@ dl {
   padding: 0px;
 }
 
+.menu img {
+  height: 1em;
+  width: 1em;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -47,10 +52,6 @@ span img {
 .claro {
   color: #222;
   background: #faf6ed;
-}
-
-.menu img {
-  height: 0.875rem;
 }
 
 img {
@@ -392,8 +393,8 @@ dt {
   display: block;
 }
 
-.texto {
-  animation: showImg 0.3s forwards;
+.texto.aumentar {
+  animation: text2 0.3s forwards;
 }
 
 .texto.diminuir {
@@ -406,6 +407,7 @@ dt {
 
 .texto.diminuir.ativo {
   display: block;
+  animation: text 0.3s forwards;
 }
 
 .js .js-accordion dd.ativo {
@@ -438,11 +440,35 @@ dt {
 @keyframes showImg {
   from {
     opacity: 0;
-    transform: translate3d(-10px, -10px, 0);
+    transform: translate3d(-15px, -15px, 0);
   }
 
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes text {
+  from {
+    opacity: 0;
+    transform: scaleX(1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(-1);
+  }
+}
+
+@keyframes text2 {
+  from {
+    opacity: 0;
+    transform: scaleX(-1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1);
   }
 }
