@@ -23,10 +23,6 @@ html.textomaior {
   transition: 0.3s;
 }
 
-.texto.inverter {
-  transform: scaleX(-1);
-}
-
 span {
   display: flex;
   gap: 10px;
@@ -393,6 +389,22 @@ dt {
 }
 
 .tema.light.ativo {
+  display: block;
+}
+
+.texto {
+  animation: showImg 0.3s forwards;
+}
+
+.texto.diminuir {
+  display: none;
+}
+
+.texto.aumentar.ativo {
+  display: none;
+}
+
+.texto.diminuir.ativo {
   display: block;
 }
 

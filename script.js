@@ -15,14 +15,18 @@
 
 /* aumentar o texto */
 function initTextoMaior() {
-  const texto = document.querySelector(".texto");
+  const textos = document.querySelectorAll(".texto");
 
   function aumentaTexto() {
     document.documentElement.classList.toggle("textomaior");
-    texto.classList.toggle("inverter");
+    textos.forEach((texto) => {
+      texto.classList.toggle("ativo");
+    });
   }
 
-  texto.addEventListener("click", aumentaTexto);
+  textos.forEach((texto) => {
+    texto.addEventListener("click", aumentaTexto);
+  });
 }
 initTextoMaior();
 
