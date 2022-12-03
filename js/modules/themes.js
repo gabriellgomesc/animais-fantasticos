@@ -1,3 +1,6 @@
+import "./observe-body.js";
+import observeBody from "./observe-body.js";
+
 export default function initTemas() {
   const claro = document.querySelector("body").classList;
   const temas = document.querySelectorAll(".tema");
@@ -9,12 +12,14 @@ export default function initTemas() {
     temas.forEach((tema) => {
       tema.classList.add("ativo");
     });
+    observeBody();
   } else {
     document.body.classList.remove("escuro");
     document.body.classList.add("claro");
     temas.forEach((tema) => {
       tema.classList.remove("ativo");
     });
+    observeBody();
   }
 
   function alteraTema() {
@@ -24,12 +29,14 @@ export default function initTemas() {
       temas.forEach((tema) => {
         tema.classList.add("ativo");
       });
+      observeBody();
     } else {
       document.body.classList.remove("escuro");
       document.body.classList.add("claro");
       temas.forEach((tema) => {
         tema.classList.remove("ativo");
       });
+      observeBody();
     }
   }
   temas.forEach((tema) => {
