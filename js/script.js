@@ -6,6 +6,7 @@ import initScroll from "./modules/anima-scroll.js";
 import initModal from "./modules/modal.js";
 import initObserve from "./modules/observe-body.js";
 import initMenuMobile from "./modules/menu-mobile.js";
+import initOutsideClick from "./modules/outside-click.js";
 
 initTemas();
 initTextoMaior();
@@ -15,3 +16,4 @@ initScroll();
 initModal();
 initObserve();
 initMenuMobile();
+initOutsideClick();

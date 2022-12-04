@@ -57,10 +57,6 @@
   }
 
   .js [data-menu="list"].desativo {
-    display: none;
-  }
-
-  .js [data-menu="list"].desativo2 {
     display: block;
     animation: hiddenMenu 0.3s forwards;
   }

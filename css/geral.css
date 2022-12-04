@@ -429,8 +429,16 @@ dt {
   position: absolute;
 }
 
-.acessibilidade div {
-  padding: 15px 15px;
+.acessibilidade .tema {
+  padding: 15px 0 15px 15px;
+}
+
+.acessibilidade .theme {
+  padding: 15px 15px 15px 0;
+}
+
+.acessibilidade span.texto {
+  padding: 15px;
 }
 
 .menu span {
