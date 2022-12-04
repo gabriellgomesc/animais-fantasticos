@@ -91,7 +91,7 @@
   @keyframes showMenu {
     from {
       opacity: 0;
-      transform: translate3d(-30px, 0, 0);
+      transform: translate3d(-160px, 0, 0);
     }
 
     to {
@@ -108,7 +108,7 @@
 
     to {
       opacity: 0;
-      transform: translate3d(-30px, 0, 0);
+      transform: translate3d(-160px, 0, 0);
     }
   }
 }
