@@ -19,7 +19,7 @@
     margin: 10px;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 5px;
     z-index: 5;
   }
 
@@ -27,8 +27,9 @@
     content: "";
     display: inline-block;
     height: 2px;
-    width: 12px;
+    width: 15px;
     background: #fff;
+    border-radius: 2px;
     transition: 0.3s;
     box-shadow: 0 4px #fff, 0 -4px #fff;
   }
@@ -56,6 +57,10 @@
   }
 
   .js [data-menu="list"].desativo {
+    display: none;
+  }
+
+  .js [data-menu="list"].desativo2 {
     display: block;
     animation: hiddenMenu 0.3s forwards;
   }

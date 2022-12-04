@@ -418,6 +418,7 @@ dt {
 
 .alter-tema {
   display: flex;
+  gap: 5px;
   align-items: center;
 }
 
@@ -430,10 +431,6 @@ dt {
 
 .acessibilidade div {
   padding: 15px 15px;
-}
-
-.acessibilidade .theme {
-  display: none;
 }
 
 .menu span {
