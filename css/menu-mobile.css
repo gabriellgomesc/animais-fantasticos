@@ -1,0 +1,109 @@
+[data-menu="button"] {
+  display: none;
+}
+
+[data-menu="button"] span {
+  margin-bottom: 0;
+  font-weight: 700;
+  color: #fff;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+@media (max-width: 700px) {
+  .js [data-menu="button"] {
+    background: #222;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 5;
+  }
+
+  .js [data-menu="button"]::before {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 12px;
+    background: #fff;
+    transition: 0.3s;
+    box-shadow: 0 4px #fff, 0 -4px #fff;
+  }
+
+  .js [data-menu="button"].ativo::before {
+    transform: rotate(180deg);
+    box-shadow: none;
+  }
+
+  .js [data-menu="list"] {
+    display: none;
+    position: absolute;
+    background: #fb5;
+    width: 160px;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    padding: 60px 0 20px 0;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .js [data-menu="list"].ativo {
+    display: block;
+    animation: showMenu 0.3s forwards;
+  }
+
+  .js [data-menu="list"].desativo {
+    display: block;
+    animation: hiddenMenu 0.3s forwards;
+  }
+
+  .acessibilidade {
+    position: static;
+  }
+
+  .acessibilidade .theme {
+    display: flex;
+  }
+
+  .acessibilidade .alter-tema {
+    padding: 0;
+  }
+
+  [data-menu="list"] div {
+    padding: 10px 20px;
+    display: flex;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 16px;
+    align-items: center;
+    gap: 5px;
+    max-width: max-content;
+  }
+
+  @keyframes showMenu {
+    from {
+      opacity: 0;
+      transform: translate3d(-30px, 0, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes hiddenMenu {
+    from {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    to {
+      opacity: 0;
+      transform: translate3d(-30px, 0, 0);
+    }
+  }
+}

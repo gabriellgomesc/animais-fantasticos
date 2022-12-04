@@ -2,43 +2,46 @@ import "./observe-body.js";
 import observeBody from "./observe-body.js";
 
 export default function initTemas() {
-  const claro = document.querySelector("body").classList;
-  const temas = document.querySelectorAll(".tema");
-
   const temaPC = window.matchMedia("(prefers-color-scheme: dark)");
+  const link = document.querySelector(".theme");
+  const temas = document.querySelectorAll(".tema");
+  const classBody = document.body.classList;
+
   if (temaPC.matches) {
-    document.body.classList.remove("claro");
-    document.body.classList.add("escuro");
+    classBody.remove("claro");
+    classBody.add("escuro");
     temas.forEach((tema) => {
       tema.classList.add("ativo");
     });
-    observeBody();
   } else {
-    document.body.classList.remove("escuro");
-    document.body.classList.add("claro");
+    classBody.remove("escuro");
+    classBody.add("claro");
     temas.forEach((tema) => {
       tema.classList.remove("ativo");
     });
-    observeBody();
   }
 
   function alteraTema() {
-    if (claro[0] === "claro") {
-      document.body.classList.remove("claro");
-      document.body.classList.add("escuro");
+    if (classBody.contains("claro")) {
+      classBody.remove("claro");
+      classBody.add("escuro");
       temas.forEach((tema) => {
         tema.classList.add("ativo");
       });
       observeBody();
     } else {
-      document.body.classList.remove("escuro");
-      document.body.classList.add("claro");
+      classBody.remove("escuro");
+      classBody.add("claro");
+      classBody.remove("escuro");
+      classBody.add("claro");
       temas.forEach((tema) => {
         tema.classList.remove("ativo");
       });
       observeBody();
     }
   }
+  link.addEventListener("click", alteraTema);
+
   temas.forEach((tema) => {
     tema.addEventListener("click", alteraTema);
   });

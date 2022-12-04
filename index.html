@@ -11,21 +11,25 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Playfair+Display&display=swap"
     rel="stylesheet">
   <script>document.documentElement.className = ' js'</script>
-  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body class="claro">
   <div class="grid-container">
     <nav class="menu">
-      <ul>
-        <li><a href="#animais">Animais</a></li>
-        <li><a href="#faq">Faq</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li><a data-modal="abrir" href="login.html">Login →</a></li>
-        <li><img src="./img/dark_mode.svg" class="tema dark" alt="dark mode" height="24" width="24"><img
-            src="./img/light_mode.svg" class="tema light" alt="light mode" height="24" width="24"></li>
-        <li><img src="./img/text_increase.svg" class="texto aumentar" alt="aumentar texto" height="24" width="24"><img
-            src="./img/text_decrease.svg" class="texto diminuir" alt="diminuir texto" height="24" width="24"></li>
+      <button data-menu="button" aria-expanded="false" aria-controls="menu"><span>MENU</span></button>
+      <ul class="desativo" data-menu="list" id="menu">
+        <li><a href="#animais">ANIMAIS</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contato">CONTATO</a></li>
+        <li><a data-modal="abrir" href="login.html">LOGIN →</a></li>
+        <li class="acessibilidade">
+          <div class="alter-tema"><img src="./img/dark_mode.svg" class="tema dark" alt="dark mode" height="24"
+              width="24"><img src="./img/light_mode.svg" class="tema light" alt="light mode" height="24"
+              width="24"><span class="theme">DARK MODE</span></div>
+          <div class="size-text"><span class="texto aumentar" alt="aumentar texto" height="24" width="24">A+</span><span
+              class="texto diminuir" alt="diminuir texto" height="24" width="24">A-</span></div>
+        </li>
       </ul>
     </nav>
 
@@ -177,7 +181,7 @@
       <form action="">
         <label for="email">E-mail</label>
         <input type="text" for="email" id="email">
-        <label for="senha">E-mail</label>
+        <label for="senha">Senha</label>
         <input type="current-password" for="senha" id="senha">
         <button type="submit">Entrar</button>
       </form>
