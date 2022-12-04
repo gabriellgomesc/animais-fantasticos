@@ -69,6 +69,14 @@
     display: flex;
   }
 
+  .acessibilidade .tema {
+    padding: 0;
+  }
+  
+  .acessibilidade .theme {
+    padding: 0;
+  }
+
   .acessibilidade .alter-tema {
     padding: 0;
   }
