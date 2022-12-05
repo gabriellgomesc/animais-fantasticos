@@ -9,7 +9,7 @@
   font-family: "IBM Plex Mono", monospace;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .js [data-menu="button"] {
     background: #222;
     border: none;
