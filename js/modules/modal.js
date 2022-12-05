@@ -9,10 +9,19 @@ export default function initModal() {
     function toggleModal(event) {
       event.preventDefault();
       containerModal.classList.toggle("ativo");
+      menuButton.addEventListener("click", () => {
+        if (containerModal.classList.contains("ativo")) {
+          containerModal.classList.toggle("ativo");
+        }
+      });
+      desactiveMenu();
+    }
+
+    function desactiveMenu() {
       menuList.classList.remove("ativo");
       menuButton.classList.remove("ativo");
-      menuList.classList.add("desativo");
-      menuButton.classList.add("desativo");
+      menuList.classList.add("desativo2");
+      menuButton.classList.add("desativo2");
     }
 
     function outsideClick(event) {

@@ -51,12 +51,20 @@
     box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
   }
 
+  .js [data-menu="list"] li:last-child {
+    padding: 0;
+  }
+
   .js [data-menu="list"].ativo {
     display: block;
     animation: showMenu 0.3s forwards;
   }
 
   .js [data-menu="list"].desativo {
+    display: none;
+  }
+
+  .js [data-menu="list"].desativo2 {
     display: block;
     animation: hiddenMenu 0.3s forwards;
   }
@@ -70,11 +78,11 @@
   }
 
   .acessibilidade .tema {
-    padding: 0;
+    padding: 15px 5px 15px 10px;
   }
-  
+
   .acessibilidade .theme {
-    padding: 0;
+    padding: 15px 10px 15px 0;
   }
 
   .acessibilidade .alter-tema {
@@ -88,7 +96,6 @@
     transition: 0.5s;
     font-size: 16px;
     align-items: center;
-    gap: 5px;
     max-width: max-content;
   }
 
