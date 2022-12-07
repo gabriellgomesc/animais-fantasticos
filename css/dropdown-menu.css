@@ -32,12 +32,10 @@
   transition: 0.3s;
 }
 
-[data-dropdown]:hover img,
 [data-dropdown].ativo img {
   transform: rotate(180deg);
 }
 
-[data-dropdown]:hover .dropdown-menu,
 [data-dropdown].ativo .dropdown-menu {
   display: block;
   animation: showDropdown 0.3s forwards;
