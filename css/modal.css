@@ -34,14 +34,33 @@
 .modal {
   background: #faf6ed;
   width: 300px;
-  padding: 40px;
+  padding: 40px 40px 30px 40px;
   color: #222;
   border: 10px solid #fb5;
   box-shadow: 0 0 0 10px #faf6ed;
   position: relative;
+  border-radius: 4px;
+}
+
+.modal a {
+  background: #faf6ed;
+  color: #222;
+  text-decoration: none;
+  font-family: "Playfair Display SC", georgia;
+  font-size: 1rem;
+}
+
+.modal a:hover {
+  text-decoration: underline;
 }
 
 .modal.dark {
+  background: #222;
+  color: #faf6ed;
+  box-shadow: 0 0 0 10px #222;
+}
+
+.modal.dark a {
   background: #222;
   color: #faf6ed;
   box-shadow: 0 0 0 10px #222;
@@ -70,12 +89,14 @@
   font-family: "IBM Plex Mono", monospace;
   display: block;
   font-weight: 700;
+  font-size: 1.125rem;
   margin: 1rem 0 0.5rem 0;
 }
 
 .modal input {
   width: 100%;
   padding: 0.7rem 0.5rem;
+  border-radius: 4px;
   box-sizing: border-box;
 }
 
@@ -94,6 +115,33 @@
   width: 100%;
 }
 
+.modal h1 {
+  justify-self: center;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 2rem;
+}
+
+.submit {
+  transition: 0.3s;
+}
+
+.submit:hover {
+  transform: scale(1.05);
+}
+
+.submit:active {
+  transform: scale(0.95);
+}
+
+.modal li {
+  display: block;
+  padding: 10px;
+}
+
+.modal ul li:first-child {
+  margin-top: 10px;
+}
+
 @media (max-width: 500px) {
   .modal {
     padding: 20px;
@@ -107,5 +155,9 @@
     width: 40px;
     height: 40px;
     font-size: 1rem;
+  }
+
+  .modal {
+    min-width: 250px;
   }
 }

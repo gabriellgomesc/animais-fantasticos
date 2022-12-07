@@ -26,7 +26,7 @@
             <li><a href="empresa.html">EMPRESA</a></li>
             <li><a href="equipe.html">EQUIPE</a></li>
             <li><a href="socios.html">SÓCIOS</a></li>
-            <li><a href="investidores.html">INVESTIDORES</a></li>
+            <li id="investidores"><a href="investidores.html">INVESTIDORES</a></li>
           </ul>
         </li>
         <li><a href="#faq">FAQ</a></li>
@@ -188,12 +188,17 @@
     <div class="modal" data-modal="theme">
       <button data-modal="fechar" class="fechar">✕</button>
       <form action="">
+        <h1 class="">Entrar</h1>
         <label for="email">E-mail</label>
         <input type="text" for="email" id="email">
         <label for="senha">Senha</label>
         <input type="current-password" for="senha" id="senha">
-        <button type="submit">Entrar</button>
+        <button class="submit modal-links" type="submit">Entrar</button>
       </form>
+      <ul>
+        <li><a class="modal-links" href="redefinir-senha.html">Esqueceu a senha?</a></li>
+        <li><a class="modal-links" href="cadastro.html">Ainda não possui uma conta?</a></li>
+      </ul>
     </div>
   </section>
   <script type="module" src="./js/script.js"></script>

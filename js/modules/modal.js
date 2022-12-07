@@ -34,4 +34,13 @@ export default function initModal() {
     botaoClose.addEventListener("click", toggleModal);
     containerModal.addEventListener("click", outsideClick);
   }
+
+  const modalLinks = document.querySelectorAll(".modal-links");
+  modalLinks.forEach((link) => {
+    link.addEventListener("click", eventDefault);
+  });
+
+  function eventDefault(event) {
+    event.preventDefault();
+  }
 }

@@ -12,6 +12,11 @@
 @media (max-width: 600px) {
   #menu {
     display: block;
+    padding: 60px 10px 10px 10px;
+  }
+
+  #menu.desativo {
+    display: none;
   }
 
   .js [data-menu="button"] {
@@ -73,19 +78,19 @@
     animation: hiddenMenu 0.3s forwards;
   }
 
-  .acessibilidade {
+  .js .acessibilidade {
     position: static;
   }
 
-  .acessibilidade .theme {
+  .js .acessibilidade .theme {
     display: flex;
   }
 
-  .acessibilidade .tema {
+  .js .acessibilidade .tema {
     padding: 15px 5px 15px 10px;
   }
 
-  .acessibilidade .theme {
+  .js .acessibilidade .theme {
     padding: 15px 10px 15px 0;
   }
 
@@ -101,6 +106,18 @@
     font-size: 16px;
     align-items: center;
     max-width: max-content;
+  }
+
+  .menu li {
+    display: block;
+  }
+
+  .js .dropdown-menu {
+    right: 160px;
+  }
+
+  #investidores {
+    padding: 15px 10px;
   }
 
   @keyframes showMenu {
