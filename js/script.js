@@ -7,6 +7,7 @@ import initModal from "./modules/modal.js";
 import initObserve from "./modules/observe-body.js";
 import initTooltip from "./modules/tooltip.js";
 import initMenuMobile from "./modules/menu-mobile.js";
+import intitDropdownMenu from "./modules/dropdown-menu.js";
 import initOutsideClick from "./modules/outside-click.js";
 
 initTemas();
@@ -18,4 +19,5 @@ initModal();
 initObserve();
 initTooltip();
 initMenuMobile();
+intitDropdownMenu();
 initOutsideClick();

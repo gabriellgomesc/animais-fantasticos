@@ -74,7 +74,7 @@ ul {
   border-radius: 10px 0 0 10px;
 }
 
-.menu ul {
+#menu {
   display: flex;
   align-items: center;
   padding: 10px;
@@ -252,9 +252,13 @@ ul {
   .acessibilidade .size-text {
     display: none;
   }
+
+  .acessibilidade {
+    right: 0;
+  }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 720px) {
   .grid-container {
     grid-template-columns: 1fr;
   }
@@ -425,7 +429,12 @@ dt {
   display: flex;
   gap: 10px;
   right: 10px;
+  padding: 0;
   position: absolute;
+}
+
+.menu li:last-child.acessibilidade {
+  padding: 0;
 }
 
 .acessibilidade .tema {

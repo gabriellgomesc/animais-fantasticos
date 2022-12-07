@@ -10,6 +10,10 @@
 }
 
 @media (max-width: 600px) {
+  #menu {
+    display: block;
+  }
+
   .js [data-menu="button"] {
     background: #222;
     border: none;
