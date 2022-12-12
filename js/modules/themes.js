@@ -1,4 +1,3 @@
-import "./observe-body.js";
 import observeBody from "./observe-body.js";
 
 export default function initTemas() {

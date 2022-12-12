@@ -221,8 +221,11 @@ ul {
 }
 
 .dados li {
+  display: flex;
   margin-bottom: 1rem;
   font-family: Helvetica, Arial;
+  align-items: center;
+  gap: 10px;
 }
 
 .dados li::before {
@@ -230,7 +233,6 @@ ul {
   display: inline-block;
   width: 20px;
   height: 10px;
-  margin-right: 10px;
   background: #fb5;
 }
 

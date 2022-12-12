@@ -1,0 +1,17 @@
+[data-semana]::after {
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(red, #e54);
+  border-radius: 50%;
+  border: 0.15rem solid #fff;
+}
+
+[data-semana].aberto::after {
+  background: linear-gradient(greenyellow, #3f4);
+}
+
+[data-semana].dark::after {
+  border: 0.15rem solid #000;
+}
