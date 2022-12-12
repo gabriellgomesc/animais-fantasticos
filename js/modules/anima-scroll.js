@@ -10,7 +10,7 @@ export default function initScroll() {
         const isSectionVisible = sectionTop - window60 <= 0;
         if (isSectionVisible) {
           section.classList.add(activeClass);
-        } else {
+        } else if (section.classList.contains(activeClass)) {
           section.classList.remove(activeClass);
         }
       });

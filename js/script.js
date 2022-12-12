@@ -8,7 +8,7 @@ import initObserve from "./modules/observe-body.js";
 import initTooltip from "./modules/tooltip.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import intitDropdownMenu from "./modules/dropdown-menu.js";
-import initOutsideClick from "./modules/outside-click.js";
+import initAnimaNumeros from "./modules/anima-numeros.js";
 
 initTemas();
 initTextoMaior();
@@ -20,4 +20,4 @@ initObserve();
 initTooltip();
 initMenuMobile();
 intitDropdownMenu();
-initOutsideClick();
+initAnimaNumeros();
