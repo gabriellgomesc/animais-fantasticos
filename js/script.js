@@ -10,6 +10,7 @@ import initMenuMobile from "./modules/menu-mobile.js";
 import intitDropdownMenu from "./modules/dropdown-menu.js";
 import initAnimaNumeros from "./modules/anima-numeros.js";
 import initFuncionamento from "./modules/funcionamento.js";
+import initValidationLogin from "./modules/validation-login.js";
 
 initTemas();
 initTextoMaior();
@@ -23,3 +24,4 @@ initMenuMobile();
 intitDropdownMenu();
 initAnimaNumeros();
 initFuncionamento();
+initValidationLogin();
