@@ -35,7 +35,7 @@
   background: #faf6ed;
   width: 300px;
   padding: 40px 40px 30px 40px;
-  color: #222;
+  color: #111;
   border: 10px solid #fb5;
   box-shadow: 0 0 0 10px #faf6ed;
   position: relative;
@@ -44,7 +44,7 @@
 
 .modal a {
   background: #faf6ed;
-  color: #222;
+  color: #111;
   text-decoration: none;
   font-family: georgia;
   font-size: 1rem;
@@ -55,15 +55,15 @@
 }
 
 .modal.dark {
-  background: #222;
+  background: #111;
   color: #faf6ed;
-  box-shadow: 0 0 0 10px #222;
+  box-shadow: 0 0 0 10px #111;
 }
 
 .modal.dark a {
-  background: #222;
+  background: #111;
   color: #faf6ed;
-  box-shadow: 0 0 0 10px #222;
+  box-shadow: 0 0 0 10px #111;
 }
 
 .fechar {

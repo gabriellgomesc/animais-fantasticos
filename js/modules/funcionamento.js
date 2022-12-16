@@ -10,8 +10,7 @@ export default function initFuncionamento() {
 
   const link = document.querySelector(".theme");
   const temas = document.querySelectorAll(".tema");
-  console.log(link, temas);
-  
+
   link.addEventListener("click", observeBody);
   temas.forEach((tema) => {
     tema.addEventListener("click", observeBody);

@@ -40,11 +40,11 @@ span {
 
 .escuro {
   color: #faf6ed;
-  background: #222;
+  background: #111;
 }
 
 .claro {
-  color: #222;
+  color: #111;
   background: #faf6ed;
 }
 
@@ -84,7 +84,7 @@ ul {
 .menu li a {
   display: block;
   text-decoration: none;
-  color: #222;
+  color: #111;
 }
 
 .menu li {
@@ -98,7 +98,7 @@ ul {
   user-select: none;
   font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
-  color: #222;
+  color: #111;
   font-size: 0.875rem;
   letter-spacing: 0.1em;
 }
@@ -244,7 +244,7 @@ ul {
 }
 
 .copy p {
-  color: #222;
+  color: #111;
   padding: 20px;
   font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
@@ -460,7 +460,7 @@ dt {
   user-select: none;
   font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
-  color: #222;
+  color: #111;
   font-size: 0.875rem;
   letter-spacing: 0.1em;
 }

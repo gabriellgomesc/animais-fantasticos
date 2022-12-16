@@ -6,6 +6,7 @@
   background: linear-gradient(red, #e54);
   border-radius: 50%;
   border: 0.15rem solid #fff;
+  transition: 0.3s;
 }
 
 [data-semana].aberto::after {
@@ -13,5 +14,5 @@
 }
 
 [data-semana].dark::after {
-  border: 0.15rem solid #000;
+  border: 0.15rem solid #111;
 }
