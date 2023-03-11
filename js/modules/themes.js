@@ -1,7 +1,7 @@
 import observeBody from "./observe-body.js";
+export const temaPC = window.matchMedia("(prefers-color-scheme: dark)");
 
 export default function initTemas() {
-  const temaPC = window.matchMedia("(prefers-color-scheme: dark)");
   const link = document.querySelector(".theme");
   const temas = document.querySelectorAll(".tema");
   const classBody = document.body.classList;

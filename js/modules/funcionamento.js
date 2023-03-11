@@ -11,18 +11,43 @@ export default function initFuncionamento() {
   const link = document.querySelector(".theme");
   const temas = document.querySelectorAll(".tema");
 
+  const classBody = document.body.classList;
+
   link.addEventListener("click", observeBody);
   temas.forEach((tema) => {
     tema.addEventListener("click", observeBody);
   });
 
-  function observeBody() {
-    const classBody = document.body.classList;
+  observeBlack();
+
+  function observeBlack() {
     if (classBody.contains("claro")) {
+      funcionamento.classList.add("dark");
+    } else if (
+      funcionamento.classList.contains("light") &&
+      classBody.contains("claro")
+    ) {
+      funcionamento.classList.remove("light");
       funcionamento.classList.add("dark");
     } else {
       funcionamento.classList.remove("dark");
+      funcionamento.classList.add("light");
     }
+  }
+
+  function observeBody() {
+    if (
+      classBody.contains("escuro") &&
+      funcionamento.classList.contains("light")
+    ) {
+      funcionamento.classList.remove("light");
+      funcionamento.classList.add("dark");
+    } else {
+      funcionamento.classList.remove("dark");
+      funcionamento.classList.add("light");
+    }
+
+    observeBlack();
   }
 
   if (weekOpen && timeOpen) {
