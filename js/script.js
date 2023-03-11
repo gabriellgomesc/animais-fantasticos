@@ -8,9 +8,9 @@ import observeBody from "./modules/observe-body.js";
 import initTooltip from "./modules/tooltip.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import intitDropdownMenu from "./modules/dropdown-menu.js";
-import initAnimaNumeros from "./modules/anima-numeros.js";
 import initFuncionamento from "./modules/funcionamento.js";
 import initValidationLogin from "./modules/validation-login.js";
+import initFetchAnimais from "./modules/APIs/fetch-animais.js";
 
 initTemas();
 initTextoMaior();
@@ -22,6 +22,6 @@ observeBody();
 initTooltip();
 initMenuMobile();
 intitDropdownMenu();
-initAnimaNumeros();
 initFuncionamento();
 initValidationLogin();
+initFetchAnimais();
