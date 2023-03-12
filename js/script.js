@@ -11,6 +11,7 @@ import intitDropdownMenu from "./modules/dropdown-menu.js";
 import initFuncionamento from "./modules/funcionamento.js";
 import initValidationLogin from "./modules/validation-login.js";
 import initFetchAnimais from "./modules/APIs/fetch-animais.js";
+import initFetchBitcoin from "./modules/APIs/fetch-bitcoin.js";
 
 initTemas();
 initTextoMaior();
@@ -25,3 +26,4 @@ intitDropdownMenu();
 initFuncionamento();
 initValidationLogin();
 initFetchAnimais();
+initFetchBitcoin();

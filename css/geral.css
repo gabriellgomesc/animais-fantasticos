@@ -544,3 +544,12 @@ dt {
     transform: scaleX(1);
   }
 }
+
+/* ESTILOS DO BITCOIN */
+.btc-preco {
+  margin: 0;
+  background: #3f4;
+  padding: 0.2rem 0.5rem;
+  font-weight: 700;
+  border-radius: 3px;
+}
