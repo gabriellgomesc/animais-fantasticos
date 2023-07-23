@@ -11,8 +11,8 @@ export default function initFetchBitcoin() {
     } catch (erro) {
       btcPreco.innerText = "Conecte-se à internet";
       console.log(Error(erro));
-      btcText.forEach(function (elemento) {
-        elemento.parentNode.removeChild(elemento);
+      btcText.forEach(function (tag) {
+        tag.parentNode.removeChild(tag);
       });
     }
   }
